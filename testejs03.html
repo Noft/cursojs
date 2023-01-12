@@ -1,0 +1,35 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Tste JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            var mescla = false;
+            function alternaCiclo(tipo) {
+                if (tipo == 1) {
+                    arquivo = "imagens/lua.png";
+                }
+                if (tipo == 2) {
+                    arquivo = "imagens/sol.png";
+                }
+                if (tipo == 3) {
+                    arquivo = "imagens/eclipse.png";
+                }
+                if (!mescla) {
+                document.getElementById("ciclo").src = arquivo;
+                    if (tipo == 3) {
+                        mescla = true;
+                    }
+                }/* o ! significa "não"*/
+                /*alert ("Raiou o Dia")*/
+                /*No javascript o simbolo de == significa igual e o simbolo = significa atribuição*/
+            }
+        </script><!--O que estiver entre () são parâmetros e entre {} são códigos-->
+    </head>
+    <body>
+        <h1>Alterne os ciclos dia e noite</h1>
+        <img src="imagens/lua.png" id="ciclo" onmousemove="alternaCiclo(2)" onmouseout="alternaCiclo(1)" onclick="alternaCiclo(3)"><!--o parametro onclick dispara a função ao clicar, o onmousemove dispara ao passar o mouse em cima e o onmouseout dispara ao remover o mouse de cima do objeto-->
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Tste JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function tornarDia() {
+                /*alert ("Raiou o Dia")*/
+                document.getElementById("ciclo").src = "imagens/sol.png";
+            }
+            function tornarNoite() {
+                document.getElementById("ciclo").src = "imagens/lua.png";
+            }
+            function mesclarCiclo() {
+                document.getElementById("ciclo").src = "imagens/eclipse.png";
+            }
+        </script><!--O que estiver entre () são parâmetros e entre {} são códigos-->
+    </head>
+    <body>
+        <h1>Alterne os ciclos dia e noite</h1>
+        <img src="imagens/lua.png" id="ciclo" onmousemove="tornarDia()" onmouseout="tornarNoite()" onclick="mesclarCiclo()"><!--o parametro onclick dispara a função ao clicar, o onmousemove dispara ao passar o mouse em cima e o onmouseout dispara ao remover o mouse de cima do objeto-->
+    </body>
+</html>
